@@ -36,7 +36,7 @@ parts:
     override-pull: |
       snapcraftctl pull
       # get RAK overlays for the 2245
-      git clone https://github.com/RAKWireless/rak_common_for_gateway.git
+      git clone -b4.2.7 https://github.com/RAKWireless/rak_common_for_gateway.git
       # copy patched bits in place
       cp rak_common_for_gateway/lora/rak2245/library.cfg libloragw/library.cfg
       cp rak_common_for_gateway/lora/rak2245/loragw_spi.native.c libloragw/src/loragw_spi.native.c
